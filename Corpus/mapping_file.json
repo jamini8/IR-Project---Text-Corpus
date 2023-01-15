@@ -1,0 +1,229 @@
+{
+    "settings" : {
+        "index" : {
+            "analysis" : {
+            "analyzer" : {
+                "plain" : {
+                "filter" : [],
+                "tokenizer" : "standard"
+                },
+                "case_insensitive" : {
+                "filter" : ["lowercase"],
+                "tokenizer" : "standard"
+                },
+                "inflections" : {
+                  "filter" : ["porter_stem"],
+                  "tokenizer" : "standard"
+                },
+                "case_insensitive_and_inflections" : {
+                  "filter" : ["lowercase", "porter_stem"],
+                  "tokenizer" : "standard"
+                }
+            }
+          }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "Title": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+            "Singer": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "Composer": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "Lyricist": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "album": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "year": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "Lyrics": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "metaphor": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "source": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "target": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            },
+	    "interpretation": {
+              "type": "text",
+              "analyzer": "plain",
+              "fields": {
+                "case_insensitive": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive"
+                },
+                "inflections": {
+                  "type":  "text",
+                  "analyzer": "inflections"
+                },
+                "case_insensitive_and_inflections": {
+                  "type":  "text",
+                  "analyzer": "case_insensitive_and_inflections"
+                }
+              }
+            }
+		
+        }
+    }
+}
