@@ -7,18 +7,16 @@
 
 ---
 
-## Getting started 🐣
-
-This is a generated search experience created with [Search UI](https://github.com/elastic/search-ui).
+## Getting started 
 
 To set up and run this project, follow the instructions below.
 
-Requires [npm](https://www.npmjs.com/).
+Requires npm.
 
 Dependencies:
 - Node v16.13.0
 
-One can leverage [NVM](https://github.com/nvm-sh/nvm) to install Node before proceeding to start the application by running the following commands:
+One can leverage nvm to install Node before proceeding to start the application by running the following commands:
 
 ```bash
 # Run this to install Node 16.13.0
