@@ -31,15 +31,14 @@ import {
 
 const { hostIdentifier, searchKey, endpointBase, engineName } = getConfig();
 
+
 const connector = new ElasticsearchAPIConnector({
   cloud: {
-    id: "<my-elastic-cloud-id>"
+    id: "sinhala_metaphores:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ0NmJkN2RkMWRmYTk0NjY0YjkzYjBjOTQwNjQwMWE1MyRlZWFkMWU5Njc3ZjU0YzYzYWRhOGNjZjQ3NjUxZDQ5MA==",
   },
-  apiKey: "<api-key>",
+  apiKey: "OUM3SHNZVUI4SFE1V0kzWVV5REc6MGM3STd6NUNTWTJUQWNoUUt3VGFfdw==",
   index: "sinhala-metaphores"
 });
-
-
 
 
 const config = {
@@ -94,31 +93,6 @@ const config = {
     }
   },
 
-  autocompleteQuery: {
-    results: {
-      resultsPerPage: 5,
-      search_fields: {
-        "target.suggest": {
-          weight: 3
-        }
-      },
-      result_fields: {
-        target: {
-          snippet: {
-            size: 100,
-            fallback: true
-          }
-        },
-        
-      }
-    },
-    suggestions: {
-      types: {
-        results: { fields: ["movie_completion"] }
-      },
-      size: 4
-    }
-  },
 
   apiConnector: connector,
   alwaysSearchOnInitialLoad: true
@@ -136,7 +110,7 @@ export default function App() {
             <div className="App">
               <ErrorBoundary>
                 <Layout
-                  header={<SearchBox autocompleteSuggestions={false} />}
+                  header={<SearchBox/>}
                   
                   sideContent={
                     
