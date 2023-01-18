@@ -1,12 +1,3 @@
-## Contents
-
-- [Getting started](#getting-started-)
-- [Usage](#usage)
-- [FAQ](#faq-)
-- [License](#license-)
-
----
-
 ## Getting started 
 
 To set up and run this project, follow the instructions below.
