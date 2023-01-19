@@ -1,229 +1,126 @@
 {
-    "settings" : {
-        "index" : {
-            "analysis" : {
-            "analyzer" : {
-                "plain" : {
-                "filter" : [],
-                "tokenizer" : "standard"
+    "settings": {
+        "index": {
+            "analysis": {
+                "analyzer": {
+                    "sinhala_analyzer": {
+                        "type": "custom",
+                        "tokenizer": "standard",
+                        "filter": [
+                            "sinhala_stopwords",
+                            "lowercase"
+                        ]
+                    }
                 },
-                "case_insensitive" : {
-                "filter" : ["lowercase"],
-                "tokenizer" : "standard"
-                },
-                "inflections" : {
-                  "filter" : ["porter_stem"],
-                  "tokenizer" : "standard"
-                },
-                "case_insensitive_and_inflections" : {
-                  "filter" : ["lowercase", "porter_stem"],
-                  "tokenizer" : "standard"
+                "filter": {
+                    "sinhala_stopwords": {
+                        "type": "stop",
+                        "stopwords": "sinhala"
+                    }
                 }
             }
-          }
         }
     },
     "mappings": {
         "properties": {
             "Title": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
+            },
+            "Composer": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "Lyricist": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
             },
             "Singer": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "Composer": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "album": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "Lyricist": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "year": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "album": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "Lyrics": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "year": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "metaphor": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "Lyrics": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "source": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "metaphor": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "target": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
             },
-	    "source": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
+            "interpretation": {
+                "type": "text",
+                "analyzer": "sinhala_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
                 }
-              }
-            },
-	    "target": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
-                }
-              }
-            },
-	    "interpretation": {
-              "type": "text",
-              "analyzer": "plain",
-              "fields": {
-                "case_insensitive": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive"
-                },
-                "inflections": {
-                  "type":  "text",
-                  "analyzer": "inflections"
-                },
-                "case_insensitive_and_inflections": {
-                  "type":  "text",
-                  "analyzer": "case_insensitive_and_inflections"
-                }
-              }
             }
-		
         }
     }
-}
